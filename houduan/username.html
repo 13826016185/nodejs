@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <style type="text/css">
+
+        *{margin: 0;padding: 0;}
+
+        #left{
+            width: 18%;border:1px solid red;height: 800px;float:left;background:#1F222B;
+        }
+        #right{
+            width: 78%;border:1px solid blue;height:800px;float:left;
+        }
+
+        #rightt{
+            width: 100%;height: 80px;border:1px solid pink;
+        }
+
+        #rightb{
+            width: 100%;height: 718px;border:1px solid green;
+        }
+
+        #rightb #user{
+            list-style: none;
+        }
+
+
+      
+         #rightb #user li:nth-child(1){
+            margin-top:58px;
+         }
+
+        #rightb #user li p{
+            float:left;width: 138px;height: 38px;border:1px solid black;text-align: center;line-height: 38px;
+
+        }
+
+          #rightb #user li p:nth-child(6){
+            width: 218px;
+          }
+
+
+
+          #rightb #user li{
+            margin-left: 18px;width: 1066px;height: 38px;
+        }
+
+        #rightb #user li p span{
+            width: 48px;height: 38px;background: pink;display: inline-block;margin-right: 8px;font-weight: bold;cursor:pointer;
+        }
+
+        #rightb #user li p .inputs{
+            width: 118px;height: 28px;display:inline-block;border:none;
+        }
+
+
+
+          /*公共跳转部分*/
+
+      ul li a{
+        text-decoration: none;margin-left: 88px;line-height: 48px;font-size: 16px;color:black;color:#AFBFCC;
+      }
+
+      h2{
+        line-height: 38px;text-align: center;margin-top:38px;color:#AFBFCC;
+      }
+
+      #left span{
+        font-size: 22px;font-weight: bold;line-height: 48px;margin-left: 88px;color:#AFBFCC;
+      }
+      ul li{
+        list-style: none;
+      }
+
+      #shangpin{
+        margin-top:28px;
+      }
+
+     #left ul li:hover{
+        background:pink;
+      }
+
+     #left ul li a:hover{
+        color:red;
+      }
+
+       #rightt p{
+        line-height: 80px;
+      }
+
+      
+
+
+        </style>
+    </head>
+    <body>
+    <!-- 公共跳转部分 -->
+
+    <div id="left">
+      
+         <h2>后台管理系统</h2>
+
+      <ul id="shangpin">
+
+      <li class="guding">
+      <span>
+        商品管理   </span><i></i>
+      </li>
+        <li>
+          <a href="goods.html">
+            商品列表
+
+          </a>
+        </li>
+        <li>
+          <a href="addgood.html">
+            添加商品
+
+          </a>
+        </li>
+      </ul>
+
+      <!-- 用户 -->
+
+    <ul id="yonghu">
+      <li class="guding">
+      <span>
+        用户管理 </span><i></i>
+      </li>
+
+        <li>
+          <a href="username.html">
+            用户列表
+          </a>
+        </li>
+        <li>
+          <a href="adduser.html">
+            添加用户
+          </a>
+        </li>
+      </ul>
+
+      <!-- 购物车 -->
+      
+      <ul id="gouwuche">
+        <li class="guding">
+        <span>
+        购物车管理</span>  <i></i>
+        </li>
+
+        <li>
+          <a href="gouwuche.html">
+            购物车列表
+          </a>
+        </li>
+      </ul>
+
+
+
+
+    </div>
+
+
+
+    <div id="right">
+        <!-- 表头部分 -->
+        <div id="rightt">
+          
+               <p>
+            
+            <span><a href="index.html">首页</a>/</span>
+            <span>用户管理/</span>
+            <span>用户列表</span>
+
+
+          </p>
+
+
+        </div>
+
+        <!-- mysql的数据渲染部分 -->
+        <div id="rightb">
+            
+            <ul id="user">
+                <li>
+                    
+                    <p>
+                        <input type="checkbox" />
+                    </p>
+                    <p>
+                        ID
+                    </p>
+                    <p>
+                        用户名
+                    </p>
+                    <p>
+                        密码
+                    </p>
+                    <p>
+                        年龄
+                    </p>
+                    <p>
+                        时间
+                    </p>
+                    <p>
+                       操作
+                    </p>
+
+
+
+                </li>
+               <!--  <li>
+                    
+                      <p>
+                        <input type="checkbox" />
+                    </p>
+                    <p>
+                        1
+                    </p>
+                    <p>
+                        13826016185
+                    </p>
+                    <p>
+                        xy123456
+                    </p>
+                    <p>
+                        18
+                    </p>
+                    <p>
+                       2017.8.8 12:12:16
+                    </p>
+                    <p>
+                       <span class="change">S</span><span class="del">X</span>
+                    </p>
+
+
+
+                </li>
+                <li></li> -->
+            </ul>
+
+
+
+
+        </div>
+
+
+    </div>
+
+    <script type="text/javascript">
+
+
+  document.addEventListener('DOMContentLoaded',function(){
+       
+
+
+
+     var list=document.getElementById('user');
+  
+         let xhr = new XMLHttpRequest();
+
+           xhr.open('get',`/username`,true);
+                xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+                xhr.send();
+
+
+                xhr.onload = function(){
+                    if(xhr.status === 200){
+                        let res = JSON.parse(xhr.responseText);
+                            
+                      
+
+
+                var arr1=res.data;
+
+
+
+                    console.log(arr1);
+                   
+               for(var i=0;i<arr1.length;i++){
+
+
+                var html=`  <li date-id="${arr1[i].id}">
+                    
+                      <p>
+                        <input type="checkbox" />
+                    </p>
+                    <p>
+                        ${arr1[i].id}
+                    </p>
+                    <p>
+
+                    <input type="text" name="" value=" ${arr1[i].name}" class="inputs new1">
+                       
+                    </p>
+                    <p>
+                    <input type="text" name="" value="${arr1[i].password}"  class="inputs new2">
+                         
+                    </p>
+                    <p>
+                        <input type="text" name="" value="${arr1[i].age}"  class="inputs new3">
+                         
+                    </p>
+                    <p>
+                        ${arr1[i].time}
+                    </p>
+                    <p>
+                       <span class="change" date-id="${arr1[i].id}">S</span><span class="del" date-id="${arr1[i].id}">X</span>
+                    </p>
+
+
+
+                </li>`
+
+                list.innerHTML+=html;
+
+
+
+
+        // 删除
+    
+
+     var aLis=list.getElementsByClassName('del');
+
+ 
+      
+              del();
+       function del(){
+
+       for(var i=0;i<aLis.length;i++){
+
+        aLis[i].onclick=function(){
+
+           var mes= confirm('确定删除吗？');
+
+
+            
+       
+
+            console.log(this.getAttribute('date-id'));
+
+           var idd=this.getAttribute('date-id');
+
+           console.log(this.parentNode.parentNode);
+           if(mes){
+
+
+            list.removeChild(this.parentNode.parentNode);
+
+
+           var url=`/usernamedel?id=${idd}`;
+          xhr.open('get',url,true);
+          xhr.send();
+
+              xhr.onload = function(){
+                    if(xhr.status === 200){
+                        let res = JSON.parse(xhr.responseText);
+                            console.log(res.data);
+                       
+                    }
+                }
+            }else{
+                alert('不删不要乱按！');
+            }
+
+
+
+              
+          
+        }
+       }
+       }
+
+       // 修改用户数据
+   
+           var change=list.getElementsByClassName('change');
+
+            
+
+
+
+ 
+      
+              chan();
+       function chan(){
+
+       for(var i=0;i<change.length;i++){
+
+        change[i].onclick=function(){
+
+           var mes1= confirm('确定修改吗？');
+
+
+        var new1=this.parentNode.parentNode.getElementsByClassName('new1')[0].value;
+        var new2=this.parentNode.parentNode.getElementsByClassName('new2')[0].value;
+        var new3=this.parentNode.parentNode.getElementsByClassName('new3')[0].value;
+
+
+            
+       
+
+        console.log(this.getAttribute('date-id'));
+
+        var idd=this.getAttribute('date-id');
+
+        console.log(this.parentNode.parentNode);
+
+
+           if(mes1){
+
+  
+            
+          
+            console.log(new1);
+            console.log(new2);
+            console.log(new3);
+
+
+             var url=`/usernamec?id=${idd}&name=${new1}&password=${new2}&age=${new3}`;
+          xhr.open('get',url,true);
+          xhr.send();
+
+              xhr.onload = function(){
+                    if(xhr.status === 200){
+                        let res = JSON.parse(xhr.responseText);
+                            console.log(res.data);
+                       
+                    }
+                }
+
+         
+
+
+
+
+
+
+
+
+
+                
+            }else{
+                alert('不改按什么？');
+            }
+
+
+
+              
+          
+        }
+       }
+       }
+
+
+
+
+        }
+
+
+        }
+        }
+              
+
+
+
+    })
+
+
+
+
+    </script>
+    </body>
+</html>

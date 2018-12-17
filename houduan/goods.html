@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <style type="text/css">
+
+        *{margin: 0;padding: 0;}
+
+        #left{
+            width: 18%;border:1px solid red;height: 800px;float:left;background:#1F222B;
+        }
+        #right{
+            width: 78%;border:1px solid blue;height:800px;float:left;
+        }
+
+        #rightt{
+            width: 100%;height: 80px;border:1px solid pink;
+        }
+
+        #rightb{
+            width: 100%;height: 718px;border:1px solid green;
+        }
+
+        #rightb #user{
+            list-style: none;
+        }
+
+          #rightb #usert{
+            list-style: none;
+        }
+
+
+      
+         #rightb #user li:nth-child(1){
+            margin-top:36px;
+         }
+
+          #rightb #usert li{
+            margin-left:18px;
+         }
+
+        #rightb #user li p{
+            float:left;width: 118px;height: 38px;border:1px solid black;text-align: center;line-height: 38px;
+
+        }
+
+         #rightb #usert li p{
+            float:left;width: 118px;height: 38px;border:1px solid black;text-align: center;line-height: 38px;
+
+        }
+
+        
+
+          #rightb #user li{
+            margin-left: 18px;width: 1066px;height: 38px;clear:both;
+        }
+
+        #rightb #user li p span{
+            width: 48px;height: 38px;background: pink;display: inline-block;margin-right: 8px;font-weight: bold;cursor:pointer;
+        }
+
+        #rightb #user li p .inputs{
+            width: 88px;height: 28px;display:inline-block;border:none;text-align: center;
+        }
+
+         #rightb #user li p .biaoti{
+            width: 288px;height: 28px;display:inline-block;border:none;
+        }
+        
+        #rightb #user .new1{
+          width: 288px;
+        }
+
+         #rightb #usert .new1{
+          width: 288px;
+        }
+
+
+        #rightb #goodserch{
+          width: 100%;height: 98px;border:1px solid red;
+        }
+
+        #rightb #goodserch .serch{
+          width: 266px;height: 38px;font-size: 16px;margin-top:28px;margin-left:338px;
+        }
+
+        #rightb #goodserch .btn{
+          width: 96px;height: 46px;background:red;font-size: 18px;margin-top:28px;font-weight: bold;
+        }
+
+        /*page部分*/
+
+         #rightb #page{
+          clear:both;margin-top:38px;
+         }
+
+          #rightb #page p{
+          float:left;text-align: center;line-height: 38px;margin-right: 16px;
+         }
+
+           #rightb #page .page span{
+            width: 38px;height: 38px;background:pink;text-align: center;line-height: 38px;display:inline-block;font-weight: bold;margin-right: 6px;cursor:pointer;
+           }
+
+         .active6{
+            color:red;
+           }
+
+          .active8{
+            color:red;
+           }
+
+
+
+         #rightb #page #prev6{
+            width: 88px;height: 38px;background:pink;font-size: 16px;margin-left: 368px;cursor:pointer;
+         }
+
+           #rightb #page #next6{
+            width: 88px;height: 38px;background:pink;font-size: 16px;cursor:pointer;
+         }
+
+         #paixu{
+          background:pink;cursor:pointer;
+         }
+
+
+
+
+           /*公共跳转部分*/
+
+      ul li a{
+        text-decoration: none;margin-left: 88px;line-height: 48px;font-size: 16px;color:black;color:#AFBFCC;
+      }
+
+      h2{
+        line-height: 38px;text-align: center;margin-top:38px;color:#AFBFCC;
+      }
+
+      #left span{
+        font-size: 22px;font-weight: bold;line-height: 48px;margin-left: 88px;color:#AFBFCC;
+      }
+      ul li{
+        list-style: none;
+      }
+
+      #shangpin{
+        margin-top:28px;
+      }
+
+     #left ul li:hover{
+        background:pink;
+      }
+
+     #left ul li a:hover{
+        color:red;
+      }
+
+
+
+      #rightt p{
+        line-height: 80px;
+      }
+
+
+
+
+
+
+      
+
+
+        </style>
+    </head>
+    <body>
+    <!-- 公共跳转部分 -->
+
+    <div id="left">
+      
+
+
+        <h2>后台管理系统</h2>
+
+      <ul id="shangpin">
+
+      <li class="guding">
+      <span>
+        商品管理   </span><i></i>
+      </li>
+        <li>
+          <a href="goods.html">
+            商品列表
+
+          </a>
+        </li>
+        <li>
+          <a href="addgood.html">
+            添加商品
+
+          </a>
+        </li>
+      </ul>
+
+      <!-- 用户 -->
+
+    <ul id="yonghu">
+      <li class="guding">
+      <span>
+        用户管理 </span><i></i>
+      </li>
+
+        <li>
+          <a href="username.html">
+            用户列表
+          </a>
+        </li>
+        <li>
+          <a href="adduser.html">
+            添加用户
+          </a>
+        </li>
+      </ul>
+
+      <!-- 购物车 -->
+      
+      <ul id="gouwuche">
+        <li class="guding">
+        <span>
+        购物车管理</span>  <i></i>
+        </li>
+
+        <li>
+          <a href="gouwuche.html">
+            购物车列表
+          </a>
+        </li>
+      </ul>
+
+
+
+
+
+    </div>
+
+
+
+    <div id="right">
+        <!-- 表头部分 -->
+        <div id="rightt">
+          
+          <p>
+            
+            <span><a href="index.html">首页</a>/</span>
+            <span>商品管理/</span>
+            <span>商品列表</span>
+
+
+          </p>
+
+
+        </div>
+
+        <!-- mysql的数据渲染部分 -->
+        <div id="rightb">
+
+
+      <!-- 这个是搜索商品标题 -->
+        <div id="goodserch">
+          
+      <input type="text" value="" placeholder="请输入标题" class="serch"/><input type="button" value="搜索" class="btn"/>
+
+
+        </div>
+            
+            <ul id="usert">
+                <li>
+                    
+                    <p>
+                        <input type="checkbox" />
+                    </p>
+                    <p>
+                        ID
+                    </p>
+                    <p class="new1">
+                        商品标题
+                    </p>
+                    <p>
+                        原价
+                    </p>
+                    <p id="paixu">
+                        售价
+                    </p>
+                    <p>
+                        数量
+                    </p>
+                    <p>
+                       操作
+                    </p>
+
+                </li>
+                </ul>
+
+                <ul id="user">
+
+             <!--    <li date-id="${arr1[i].id}">
+                    
+                      <p>
+                        <input type="checkbox" />
+                    </p>
+                    <p>
+                        3
+                    </p>
+                    <p class="new1">
+
+                    <input type="text" name="" value=" 运动套装休闲吸汗时尚韩版潮流外套28" class="inputs new1 biaoti">
+                       
+                    </p>
+                    <p>
+                    <input type="text" name="" value="3333"  class="inputs new2">
+                         
+                    </p>
+                    <p>
+                        <input type="text" name="" value="333"  class="inputs new3">
+                         
+                    </p>
+                    <p>
+                        <input type="text" name="" value="3"  class="inputs new4">
+                      
+                    </p>
+                    <p>
+                       <span class="change" date-id="${arr1[i].id}">S</span><span class="del" date-id="${arr1[i].id}">X</span>
+                    </p>
+
+
+
+                </li> -->
+
+              
+
+          
+            </ul>
+
+
+          <div id="page">
+
+              <p class="prev" id="prev6">上一页</p>
+              <p class="page" id="page6">
+               <!--  <span class="active6">1</span>
+                <span>2</span>
+                <span>3</span> -->
+              </p>
+              <p class="next" id="next6">下一页</p>
+
+            
+
+          </div>
+
+
+
+
+        </div>
+
+
+    </div>
+
+    <script type="text/javascript">
+
+
+  document.addEventListener('DOMContentLoaded',function(){
+       
+
+        var list=document.getElementById('user');
+        var page=document.querySelector('#page6');
+        var prev=document.querySelector('#prev6');
+        var next=document.querySelector('#next6');
+
+        var serch=document.querySelector('.serch');
+        var btn=document.querySelector('.btn');
+
+        var rows=0;
+
+
+        function creat(ar){
+        
+          var res=ar.map(function(item){
+            
+            return ` <li date-id="${item.id}">
+                    
+                      <p>
+                        <input type="checkbox" />
+                    </p>
+                    <p>
+                        ${item.id}
+                    </p>
+                    <p class="new1">
+
+                    <input type="text" name="" value=" ${item.gname}" class="inputs new1 biaoti">
+                       
+                    </p>
+                    <p>
+                    <input type="text" name="" value="${item.price}"  class="inputs new2">
+                         
+                    </p>
+                    <p>
+                        <input type="text" name="" value="${item.sale}"  class="inputs new3">
+                         
+                    </p>
+                    <p>
+                        <input type="text" name="" value="${item.num}"  class="inputs new4">
+                      
+                    </p>
+                    <p>
+                       <span class="change" date-id="${item.id}">S</span><span class="del" date-id="${item.id}">X</span>
+                    </p>
+
+
+
+                </li>`;
+                }).join('');
+
+
+               list.innerHTML=res;
+
+                paixu1();
+                del();
+                chan();
+
+
+                    }
+
+
+          // 这个是上一页下一页中间数字页码
+            
+        tt();
+          
+       function tt(){
+
+           let xhr = new XMLHttpRequest();
+
+           xhr.open('get',`/goods`,true);
+
+           xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+
+                xhr.send();
+
+
+                xhr.onload = function(){
+                    if(xhr.status === 200){
+                        let res = JSON.parse(xhr.responseText);
+                            
+ 
+                var arr1=res.data.length;
+                 console.log(arr1);
+                           
+            var num=Math.ceil(arr1/9);
+            rows=num;//总页数
+            
+            for(var i=0;i<num;i++){
+              page.innerHTML+=`<span>${i+1}</span>`;
+            }
+            
+            // page.children[0].className='active8';
+
+            console.log(page.children.length);
+                    
+
+                      }
+
+                     }
+                   }
+                      
+
+           
+// 渲染数据；
+
+        
+
+             let xhr = new XMLHttpRequest();
+
+           xhr.open('get',`/goodss?page=1&qty=9`,true);
+
+           xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+
+                xhr.send();
+
+
+                xhr.onload = function(){
+                    if(xhr.status === 200){
+                    
+                    let res = JSON.parse(xhr.responseText);
+
+               var  arr=res.data;
+
+
+                console.log(res);
+                    console.log(arr);
+
+
+                    paixu1();
+                   creat(arr);
+
+
+                     }
+
+                     } 
+
+                   
+
+
+          // 上一页，下一页：
+      
+
+          var now=1;
+        
+        page.onclick=function(ev){
+          var ev = ev || window.event;
+      
+          if(ev.target.tagName.toLowerCase() == 'span'){
+      
+            now=ev.target.innerText;
+
+          
+            var url=`/goodss?page=${now}&qty=9`;
+            xhr.open('get',url,true);
+            xhr.send();
+            xhr.onreadystatechange=function(){
+              if(xhr.readyState==4 && xhr.status==200){
+                var str=xhr.responseText;
+                var arr=JSON.parse(str);
+                creat(arr);
+
+        
+             
+              for(var i=0;i<page.children.length;i++){
+                  page.children[i].className='';
+                }
+                page.children[now-1].className='active8';
+              }
+            }
+          }
+          
+        }
+
+
+
+           prev.onclick=function(){
+          now--;
+          if(now<=1){
+            now=1;//最小第一页
+          }
+          var url=`/goodss?page=${now}&qty=9`;
+          xhr.open('get',url,true);
+          xhr.send();
+          xhr.onreadystatechange=function(){
+              if(xhr.readyState==4 && xhr.status==200){
+                var str=xhr.responseText;
+                var arr=JSON.parse(str);
+                creat(arr);
+
+              
+             
+                //清空
+                for(var i=0;i<page.children.length;i++){
+                  page.children[i].className='';
+                }
+                page.children[now-1].className='active8';
+              }
+            }
+        }
+        
+        next.onclick=function(){
+          now++;
+          if(now>=rows){
+            now=rows;
+          }
+          var url=`/goodss?page=${now}&qty=9`;
+          xhr.open('get',url,true);
+          xhr.send();
+          xhr.onreadystatechange=function(){
+              if(xhr.readyState==4 && xhr.status==200){
+                var str=xhr.responseText;
+                var arr=JSON.parse(str);
+                creat(arr);
+              
+
+                
+                //清空
+                for(var i=0;i<page.children.length;i++){
+                  page.children[i].className='';
+                }
+                page.children[now-1].className='active8';
+              }
+            }
+        }
+
+
+      // 搜索框-模糊查询：
+      btn.onclick=function(){
+
+         var shuju=serch.value;
+
+         console.log(shuju);
+
+
+          var url=`/search?gname=${shuju}`;
+          xhr.open('get',url,true);
+          xhr.send();
+          xhr.onreadystatechange=function(){
+              if(xhr.readyState==4 && xhr.status==200){
+                var str=xhr.responseText;
+                var arr=JSON.parse(str);
+                creat(arr);
+                 
+
+                }}
+
+
+
+
+      }
+
+
+      // 价格排序：
+
+        var paixu=document.querySelector('#paixu');
+        var ok=true;
+
+        paixu1();
+
+      function paixu1(){
+
+        paixu.onclick=function(){
+
+          if(ok){
+
+          var url=`/jiangxu`;
+          xhr.open('get',url,true);
+          xhr.send();
+          xhr.onreadystatechange=function(){
+              if(xhr.readyState==4 && xhr.status==200){
+                var str=xhr.responseText;
+                var arr=JSON.parse(str);
+                creat(arr);
+                tt();
+             
+                }}
+
+
+
+
+          }else{
+
+          var url=`/shengxu`;
+          xhr.open('get',url,true);
+          xhr.send();
+          xhr.onreadystatechange=function(){
+              if(xhr.readyState==4 && xhr.status==200){
+                var str=xhr.responseText;
+                var arr=JSON.parse(str);
+                creat(arr);
+                  tt();
+                }}
+
+
+
+
+          }
+
+
+          ok=!ok;
+        }
+      }
+
+
+
+
+    
+
+        // 删除
+    
+
+     var aLis=list.getElementsByClassName('del');
+
+ 
+      
+              del();
+       function del(){
+
+       for(var i=0;i<aLis.length;i++){
+
+        aLis[i].onclick=function(){
+
+           var mes= confirm('确定删除吗？');
+
+
+            
+       
+
+            console.log(this.getAttribute('date-id'));
+
+           var idd=this.getAttribute('date-id');
+
+           console.log(this.parentNode.parentNode);
+           if(mes){
+
+
+            list.removeChild(this.parentNode.parentNode);
+
+
+           var url=`/goodsdel?id=${idd}`;
+          xhr.open('get',url,true);
+          xhr.send();
+
+              xhr.onload = function(){
+                    if(xhr.status === 200){
+                        let res = JSON.parse(xhr.responseText);
+                            console.log(res.data);
+                          creat(arr);
+                    }
+                }
+            }else{
+                alert('不删不要乱按！');
+            }
+
+
+
+              
+          
+        }
+       }
+       }
+
+       // 修改用户数据
+   
+           var change=list.getElementsByClassName('change');
+
+     
+              chan();
+       function chan(){
+
+       for(var i=0;i<change.length;i++){
+
+        change[i].onclick=function(){
+
+           var mes1= confirm('确定修改吗？');
+
+
+        var new1=this.parentNode.parentNode.getElementsByClassName('biaoti')[0].value;
+        var new2=this.parentNode.parentNode.getElementsByClassName('new2')[0].value;
+        var new3=this.parentNode.parentNode.getElementsByClassName('new3')[0].value;
+        var new4=this.parentNode.parentNode.getElementsByClassName('new4')[0].value;
+
+            
+       
+
+        console.log(this.getAttribute('date-id'));
+
+        var idd=this.getAttribute('date-id');
+
+        console.log(this.parentNode.parentNode);
+
+
+           if(mes1){
+
+  
+            
+          
+            console.log(new1);
+            console.log(new2);
+            console.log(new3);
+            console.log(new4);
+
+
+             var url=`/goodsc?id=${idd}&gname=${new1}&price=${new2}&sale=${new3}&num=${new4}`;
+          xhr.open('get',url,true);
+          xhr.send();
+
+              xhr.onload = function(){
+                    if(xhr.status === 200){
+                        let res = JSON.parse(xhr.responseText);
+                            console.log(res.data);
+                             creat(arr);
+                       
+                    }
+                }
+
+
+
+                
+            }else{
+                alert('不改按什么？');
+            }
+
+             
+          
+        }
+       }
+
+
+       }
+
+
+
+
+      
+    
+               
+
+
+
+    })
+
+
+
+
+    </script>
+    </body>
+</html>

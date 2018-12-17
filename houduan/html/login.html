@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+
+        <style type="text/css">
+
+        *{margin: 0;padding: 0;}
+        #login{
+            width: 380px;height: 380px;margin:0 auto;border:1px solid red;margin-top:200px;
+        }
+        h2{
+            text-align: center;line-height: 68px;
+        }
+        p{
+            line-height: 78px;margin-left: 68px;
+        }
+
+        p:nth-child(3){
+            margin-left: 82px;
+        }
+
+
+        p:nth-child(4) input{
+            width: 100px;height: 30px;font-size: 18px;background: red;color:white;
+        }
+
+        p:nth-child(4){
+            margin-left: 136px;
+        }
+
+        </style>
+    </head>
+    <body>
+
+
+        <div id="login">
+            <h2>后台管理系统</h2>
+
+            <p>
+            <label >用户名：</label>
+            <input type="text" value="" id="username"/>
+            </p>
+
+            <p>
+            <label >密码：</label>
+            <input type="password" value="" id="password"/>
+            </p>
+
+            <p>
+                <input type="button" value="登录" class="btnLogin"/>
+            </p>
+
+
+
+        </div>
+
+
+         <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            let btnLogin = document.querySelector('.btnLogin');
+            let username = document.querySelector('#username');
+            let password = document.querySelector('#password');
+
+            btnLogin.onclick = function(){
+                let xhr = new XMLHttpRequest();
+                xhr.onload = function(){
+                    if(xhr.status === 200){
+                        let res = JSON.parse(xhr.responseText);
+                            console.log(res);
+                        if(res.data.length>0){
+                            location.href="../index.html"
+                        }else{
+                            // alert('用户名或密码不正确');
+                            username.classList.add('is-invalid')
+                            password.classList.add('is-invalid')
+                            alert('用户名或密码不正确')
+                        }
+                    }
+                }
+                xhr.open('get',`/login?username=${username.value}&password=${password.value}`,true);
+                xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+                xhr.send();
+            }
+        })
+    </script>
+    </body>
+</html>

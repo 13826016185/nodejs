@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <style type="text/css">
+
+        *{margin: 0;padding: 0;}
+
+        #left{
+            width: 18%;border:1px solid red;height: 800px;float:left;background:#1F222B;
+        }
+        #right{
+            width: 78%;border:1px solid blue;height:800px;float:left;
+        }
+
+        #rightt{
+            width: 100%;height: 80px;border:1px solid pink;
+        }
+
+        #rightb{
+            width: 100%;height: 718px;border:1px solid green;
+        }
+
+        #rightb #user{
+            list-style: none;
+        }
+
+
+      
+         #rightb #user li:nth-child(1){
+            margin-top:58px;
+         }
+
+        #rightb #user li p{
+            float:left;width: 138px;height: 38px;border:1px solid black;text-align: center;line-height: 38px;
+
+        }
+
+          #rightb #user li p:nth-child(6){
+            width: 218px;
+          }
+
+
+
+          #rightb #user li{
+            margin-left: 18px;width: 1066px;height: 38px;
+        }
+
+        #rightb #user li p span{
+            width: 48px;height: 38px;background: pink;display: inline-block;margin-right: 8px;font-weight: bold;cursor:pointer;
+        }
+
+        #rightb #user li p .inputs{
+            width: 118px;height: 28px;display:inline-block;border:none;
+        }
+
+
+
+          /*公共跳转部分*/
+
+      ul li a{
+        text-decoration: none;margin-left: 88px;line-height: 48px;font-size: 16px;color:black;color:#AFBFCC;
+      }
+
+      h2{
+        line-height: 38px;text-align: center;margin-top:38px;color:#AFBFCC;
+      }
+
+      #left span{
+        font-size: 22px;font-weight: bold;line-height: 48px;margin-left: 88px;color:#AFBFCC;
+      }
+      ul li{
+        list-style: none;
+      }
+
+      #shangpin{
+        margin-top:28px;
+      }
+
+     #left ul li:hover{
+        background:pink;
+      }
+
+     #left ul li a:hover{
+        color:red;
+      }
+
+       #rightt p{
+        line-height: 80px;
+      }
+
+
+    #rightb #tupian{
+      margin-left: 188px;
+}
+
+        </style>
+    
+    
+    
+    </head>
+    <body>
+    <!-- 公共跳转部分 -->
+
+    <div id="left">
+      
+         <h2>后台管理系统</h2>
+
+      <ul id="shangpin">
+
+      <li class="guding">
+      <span>
+        商品管理   </span><i></i>
+      </li>
+        <li>
+          <a href="goods.html">
+            商品列表
+
+          </a>
+        </li>
+        <li>
+          <a href="addgood.html">
+            添加商品
+
+          </a>
+        </li>
+      </ul>
+
+      <!-- 用户 -->
+
+    <ul id="yonghu">
+      <li class="guding">
+      <span>
+        用户管理 </span><i></i>
+      </li>
+
+        <li>
+          <a href="username.html">
+            用户列表
+          </a>
+        </li>
+        <li>
+          <a href="adduser.html">
+            添加用户
+          </a>
+        </li>
+      </ul>
+
+      <!-- 购物车 -->
+      
+      <ul id="gouwuche">
+        <li class="guding">
+        <span>
+        购物车管理</span>  <i></i>
+        </li>
+
+        <li>
+          <a href="gouwuche.html">
+            购物车列表
+          </a>
+        </li>
+      </ul>
+
+
+
+
+    </div>
+
+
+
+    <div id="right">
+        <!-- 表头部分 -->
+        <div id="rightt">
+          
+               <p>
+            
+            <span>
+              <a href="index.html">首页</a>
+            </span>
+            <span></span>
+            <span></span>
+
+
+          </p>
+
+
+        </div>
+
+        <!-- mysql的数据渲染部分 -->
+        <div id="rightb">
+        <div id="tupian">
+            
+         <img src="img/abs.jpg" height="688" width="688" alt="" />
+            </div>
+
+        </div>
+
+
+    </div>
+
+   
+    </body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <style type="text/css">
+
+        *{margin: 0;padding: 0;}
+
+        #left{
+            width: 18%;border:1px solid red;height: 800px;float:left;background:#1F222B;
+        }
+        #right{
+            width: 78%;border:1px solid blue;height:800px;float:left;
+        }
+
+        #rightt{
+            width: 100%;height: 80px;border:1px solid pink;
+        }
+
+        #rightb{
+            width: 100%;height: 718px;border:1px solid green;
+        }
+
+        #rightb h2{
+          font-size: 36px;line-height: 88px;margin-left: 458px;margin-top:28px;margin-bottom: 28px;
+        }
+
+        #rightb p .biao{
+          width: 566px;height: 38px;font-size: 16px;padding-left: 16px;
+        }
+
+        #rightb p label{
+          font-size: 22px;
+        }
+
+        #rightb p{
+          line-height: 86px;margin-left: 288px;
+        }
+
+        #rightb p:nth-child(2){
+          margin-left: 242px;
+        }
+
+          #rightb p:nth-child(3){
+          margin-left: 246px;
+        }
+
+          #rightb p:nth-child(4){
+          margin-left: 250px;
+        }
+
+        #rightb p #biao5{
+          width: 288px;height: 38px;font-size: 28px;background:red;color:white;margin-left: 128px;margin-top: 68px;
+        }
+
+
+
+         /*公共跳转部分*/
+
+      ul li a{
+        text-decoration: none;margin-left: 88px;line-height: 48px;font-size: 16px;color:black;color:#AFBFCC;
+      }
+
+      #left h2{
+        line-height: 38px;text-align: center;margin-top:38px;color:#AFBFCC;
+      }
+
+      #left span{
+        font-size: 22px;font-weight: bold;line-height: 48px;margin-left: 88px;color:#AFBFCC;
+      }
+      ul li{
+        list-style: none;
+      }
+
+      #shangpin{
+        margin-top:28px;
+      }
+
+     #left ul li:hover{
+        background:pink;
+      }
+
+    #left  ul li a:hover{
+        color:red;
+      }
+
+
+       #rightt p{
+        line-height: 80px;
+      }
+
+
+
+
+
+      
+      
+
+
+        </style>
+    </head>
+    <body>
+    <!-- 公共跳转部分 -->
+
+    <div id="left">
+      
+        <h2>后台管理系统</h2>
+
+      <ul id="shangpin">
+
+      <li class="guding">
+      <span>
+        商品管理   </span><i></i>
+      </li>
+        <li>
+          <a href="goods.html">
+            商品列表
+
+          </a>
+        </li>
+        <li>
+          <a href="addgood.html">
+            添加商品
+
+          </a>
+        </li>
+      </ul>
+
+      <!-- 用户 -->
+
+    <ul id="yonghu">
+      <li class="guding">
+      <span>
+        用户管理 </span><i></i>
+      </li>
+
+        <li>
+          <a href="username.html">
+            用户列表
+          </a>
+        </li>
+        <li>
+          <a href="adduser.html">
+            添加用户
+          </a>
+        </li>
+      </ul>
+
+      <!-- 购物车 -->
+      
+      <ul id="gouwuche">
+        <li class="guding">
+        <span>
+        购物车管理</span>  <i></i>
+        </li>
+
+        <li>
+          <a href="gouwuche.html">
+            购物车列表
+          </a>
+        </li>
+      </ul>
+
+
+
+    </div>
+
+
+
+    <div id="right">
+        <!-- 表头部分 -->
+        <div id="rightt">
+          
+             <p>
+            
+            <span><a href="index.html">首页</a>/</span>
+            <span>用户管理/</span>
+            <span>添加用户</span>
+
+
+          </p>
+
+
+        </div>
+
+        <!-- mysql的数据渲染部分 -->
+        <div id="rightb">
+
+        <h2>用&nbsp;户&nbsp;注&nbsp;册&nbsp;页</h2>
+            
+        <p>
+          
+          <label for="">用 &nbsp;户 &nbsp;名：</label>
+
+          <input type="text" value="" class="biao1  biao" placeholder="请输入注册用户名"/>
+
+        </p>
+
+        <p>
+          
+          <label for="">登录密码：</label>
+
+          <input type="text" value="" class="biao2  biao" placeholder="请输入用户密码，长度随意"/>
+          
+        </p>
+
+        <p>
+          
+          <label for="">贵 &nbsp;&nbsp;&nbsp;&nbsp; 庚：</label>
+
+          <input type="text" value="" class="biao3  biao" placeholder="请输入您的年龄"/>
+          
+        </p>
+        <p>
+          
+          <input type="button" value="注册" id="biao5"/>
+        </p>
+
+
+
+
+
+        </div>
+
+
+    </div>
+
+    <script type="text/javascript">
+
+
+  document.addEventListener('DOMContentLoaded',function(){
+       
+
+
+
+     var btn=document.getElementById('biao5')
+     var b1=document.getElementsByClassName('biao1');
+     var b2=document.getElementsByClassName('biao2');
+     var b3=document.getElementsByClassName('biao3');
+
+    let xhr = new XMLHttpRequest();
+
+        btn.onclick=function(){
+
+           var mes1= confirm('确定添加用户吗？');
+
+
+      var new1=b1[0].value;
+      var new2=b2[0].value;
+      var new3=b3[0].value;
+
+          
+
+
+           if(mes1){
+
+            console.log(new1);
+            console.log(new2);
+            console.log(new3);
+
+         
+
+         var url=`/zhuce?name=${new1}&password=${new2}&age=${new3}`;
+          xhr.open('get',url,true);
+          xhr.send();
+
+          xhr.onload = function(){
+                    if(xhr.status === 200){
+                        let res = JSON.parse(xhr.responseText);
+                            console.log(res.data);
+                       
+                    }
+                }
+
+         
+
+                
+            }else{
+                alert('不添加乱按什么？');
+            }
+         
+        }
+       
+       
+
+
+    })
+
+
+
+
+    </script>
+    </body>
+</html>
